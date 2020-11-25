@@ -30,8 +30,4 @@ def pca(X):
            number of examples).    
     """
 
-    covM = np.cov(X.T)
-    U, S, _ = np.linalg.svd(covM)
-    S = S * np.eye(S.shape[0], dtype=S.dtype)
-
     return U, S

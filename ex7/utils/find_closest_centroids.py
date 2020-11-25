@@ -32,8 +32,5 @@ def find_closest_centroids(X, centroids):
     Note: You can use a for-loop over the examples to compute this.
     Note: For faster execution you should calculate distances exploiting numpy broadcast capability
     """
-    for i in range(X.shape[0]):
-        dist = np.sum((X[i, :] - centroids) ** 2, axis=-1)
-        idx[i] = np.argmin(dist)
 
     return idx

@@ -34,11 +34,5 @@ def compute_centroids(X, idx, K):
     
     Note: You can use a for-loop over the centroids to compute this.
     """
-    for i in range(K):
-        kClusterPoints = idx == i
-        kClusterPoints = X[kClusterPoints]
-
-        for j in range(n):
-            centroids[i, j] = np.mean(kClusterPoints[:, j])
 
     return centroids
