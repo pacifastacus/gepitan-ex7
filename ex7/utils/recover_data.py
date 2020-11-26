@@ -33,7 +33,7 @@ def recover_data(Z, U, K):
                   Notice that U[j, 0:K] is a row vector.
     
     """
-    Ureduce = U[:, 0:K]
-    X_rec = np.dot(Z, Ureduce.T)
+
+    X_rec = np.dot(Z, U[:, 0:K].T)
 
     return X_rec

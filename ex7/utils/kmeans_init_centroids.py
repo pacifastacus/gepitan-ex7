@@ -23,9 +23,9 @@ def kmeans_init_centroids(X, K):
                   the dataset X
     
     """
-    idx = np.random.randint(low=0,
-                            high=X.shape[0],
-                            size=K).tolist()
-    centroids = X[idx, :]
+
+    m = X.shape[0]
+    idx = np.random.permutation(m).tolist()
+    centroids = X[idx[0:K], :]
 
     return centroids

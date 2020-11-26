@@ -31,6 +31,6 @@ def project_data(X, U, K):
     
     """
 
-    Ureduce = U[:, 0:K]
-    Z = np.dot(X, Ureduce)
+    Z = np.dot(X, U[:, 0:K])
+
     return Z
